@@ -22,31 +22,14 @@ public class AppTest {
 			
 			Transaction tx = session.beginTransaction();
 			
-			Account acc1 = new Account();
-			acc1.setAccId("S_1234");
-			acc1.setAccNo("1111");
-			
-			Account acc2 = new Account();
-			acc2.setAccId("P_1234");
-			acc2.setAccNo("7777");
-			
-			Set<Account> accounts = new HashSet<Account>();
-			accounts.add(acc1);
-			accounts.add(acc2);
-			
-			Employee employee = new Employee();
-			employee.setEmpName("Swapnil");
-		    employee.setAccounts(accounts);
-		    
-		    session.save(employee);
 			
 			tx.commit();
 			
-			System.out.println("Done");
+			System.out.println("Done"); 
 			
 		} catch (Exception e) {
 			
-			System.out.println("Erroe while insertion");
+			System.out.println("Error while insertion");
 			e.printStackTrace();
 		}
 	}
