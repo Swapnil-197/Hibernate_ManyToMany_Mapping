@@ -1,13 +1,15 @@
 package com.tka.util;
 
 import java.util.Properties;
+
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
-import com.tka.pojo.Account;
-import com.tka.pojo.Employee;
+
+import com.tka.pojo.Reader;
+import com.tka.pojo.Subscription;
 
 public class HibernateUtil {
 	
@@ -32,8 +34,8 @@ public class HibernateUtil {
 		
 	    cfg.setProperties(settings);
 	    
-	    cfg.addAnnotatedClass(Employee.class);
-	    cfg.addAnnotatedClass(Account.class);
+	    cfg.addAnnotatedClass(Reader.class);
+	    cfg.addAnnotatedClass(Subscription.class);
 	    
 	    StandardServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
 	    		.applySettings(cfg.getProperties()).build();

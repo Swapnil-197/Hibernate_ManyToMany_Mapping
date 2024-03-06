@@ -1,15 +1,7 @@
 package com.tka.test;
 
-import java.util.HashSet;
-import java.util.Set;
-import java.util.logging.LogManager;
-
-import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-
-import com.tka.pojo.Account;
-import com.tka.pojo.Employee;
 import com.tka.util.HibernateUtil;
 
 public class AppTest {

@@ -2,6 +2,7 @@ package com.tka.pojo;
 
 import java.util.Set;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -11,10 +12,18 @@ public class Subscription {
 	
 	@Id
 	@GeneratedValue
+	@Column(unique = true , nullable = false)
 	private Integer subscriptionId;
+	@Column(unique = true , nullable = false)
 	private String subscriptionName; 
-	private Set<Reader> readers;
 	
+	private Set<Reader> readers;
+
+	public Subscription() {
+		super();
+		
+	}
+
 	public Integer getSubscriptionId() {
 		return subscriptionId;
 	}
@@ -39,5 +48,4 @@ public class Subscription {
 		this.readers = readers;
 	}
 
-	
 }
